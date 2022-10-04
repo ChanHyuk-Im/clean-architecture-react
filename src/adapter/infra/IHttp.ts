@@ -1,6 +1,6 @@
 export interface IRequestOptions {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE';
-  header?: string;
+  header?: any;
   body?: any;
 }
 
