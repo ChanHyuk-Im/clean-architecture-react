@@ -5,11 +5,11 @@ import { ISessionRepository } from '../repository/interface/ISession';
 export class Session implements ISessionUsecase {
   constructor(private sessionRepository: ISessionRepository) {}
 
-  async login(dto: ILoginDto): Promise<string> {
+  async login(dto: ILoginDto): Promise<string | null> {
     return await this.sessionRepository.login(dto);
   }
 
-  async getToken(): Promise<string> {
+  async getToken(): Promise<string | null> {
     return await this.sessionRepository.getToken();
   }
 
