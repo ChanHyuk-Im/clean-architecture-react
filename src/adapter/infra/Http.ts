@@ -1,8 +1,6 @@
-import { IHttp, IRequestOptions } from './IHttp';
+import { IHttp, IRequestOptions } from './interface/IHttp';
 
 export class Http implements IHttp {
-  constructor() {}
-
   async request(url: string, requestOptions: IRequestOptions): Promise<any> {
     const options = { ...requestOptions };
 

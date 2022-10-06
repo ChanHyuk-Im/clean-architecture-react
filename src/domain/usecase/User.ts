@@ -1,6 +1,6 @@
-import { IUserEntity } from '../entity/IUser';
-import { IUserUsecase } from './IUser';
-import { IUserRepository } from '../repository/IUser';
+import { IUserEntity } from '../entity/interface/IUser';
+import { IUserUsecase } from './interface/IUser';
+import { IUserRepository } from '../repository/interface/IUser';
 
 export class UserUsecase implements IUserUsecase {
   constructor(private userRepository: IUserRepository) {}

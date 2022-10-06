@@ -1,4 +1,4 @@
-import { IUserEntity, IUserData } from './IUser';
+import { IUserEntity, IUserData } from './interface/IUser';
 
 export class UserEntity implements IUserEntity {
   private _id: IUserEntity['id'];

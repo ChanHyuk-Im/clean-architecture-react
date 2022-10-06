@@ -1,5 +1,5 @@
 import React from 'react';
-import { IUserEntity } from '../../../domain/entity/IUser';
+import { IUserEntity } from '../../../domain/entity/interface/IUser';
 import di from '../../di';
 
 const User = () => {

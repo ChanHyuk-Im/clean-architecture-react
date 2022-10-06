@@ -1,7 +1,7 @@
-import { IUserEntity, Role } from '../../domain/entity/IUser';
+import { IUserEntity, Role } from '../../domain/entity/interface/IUser';
 import { UserEntity } from '../../domain/entity/User';
-import { IUserRepository } from '../../domain/repository/IUser';
-import { IHttp } from '../infra/IHttp';
+import { IUserRepository } from '../../domain/repository/interface/IUser';
+import { IHttp } from '../infra/interface/IHttp';
 
 export class UserRepository implements IUserRepository {
   constructor(private http: IHttp) {}

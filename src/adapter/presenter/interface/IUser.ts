@@ -1,6 +1,6 @@
-import { IUserEntity } from '../entity/IUser';
+import { IUserEntity } from '../../../domain/entity/interface/IUser';
 
-export interface IUserRepository {
+export interface IUserPresenter {
   getUser: () => Promise<IUserEntity | null>;
   setName: (name: IUserEntity['name']) => Promise<boolean>;
 }

@@ -1,7 +1,9 @@
-import { IRepository } from './IRepository';
+import { IRepository } from './interface/IRepository';
 import { UserRepository } from '../../adapter/repository/User';
-import { IInfra } from './IInfra';
+import { IInfra } from './interface/IInfra';
 
-export default (infra: IInfra): IRepository => ({
+const presenter = (infra: IInfra): IRepository => ({
   user: new UserRepository(infra.http),
 });
+
+export default presenter;

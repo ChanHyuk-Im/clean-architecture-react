@@ -1,7 +1,9 @@
-import { IPresenter } from './IPresenter';
+import { IPresenter } from './interface/IPresenter';
 import { UserPresenter } from '../../adapter/presenter/User';
-import { IUsecase } from './IUsecase';
+import { IUsecase } from './interface/IUsecase';
 
-export default (usecase: IUsecase): IPresenter => ({
+const presenter = (usecase: IUsecase): IPresenter => ({
   user: new UserPresenter(usecase.user),
 });
+
+export default presenter;

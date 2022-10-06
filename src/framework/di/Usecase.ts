@@ -1,7 +1,9 @@
-import { IUsecase } from './IUsecase';
+import { IUsecase } from './interface/IUsecase';
 import { UserUsecase } from '../../domain/usecase/User';
-import { IRepository } from './IRepository';
+import { IRepository } from './interface/IRepository';
 
-export default (repository: IRepository): IUsecase => ({
+const usecase = (repository: IRepository): IUsecase => ({
   user: new UserUsecase(repository.user),
 });
+
+export default usecase;

@@ -1,6 +1,6 @@
-import { IUserPresenter } from './IUser';
-import { IUserEntity } from '../../domain/entity/IUser';
-import { IUserUsecase } from '../../domain/usecase/IUser';
+import { IUserPresenter } from './interface/IUser';
+import { IUserEntity } from '../../domain/entity/interface/IUser';
+import { IUserUsecase } from '../../domain/usecase/interface/IUser';
 
 export class UserPresenter implements IUserPresenter {
   constructor(private userUsecase: IUserUsecase) {}
