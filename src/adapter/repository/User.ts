@@ -1,4 +1,4 @@
-import { IUserEntity } from '../../domain/entity/IUser';
+import { IUserEntity, Role } from '../../domain/entity/IUser';
 import { UserEntity } from '../../domain/entity/User';
 import { IUserRepository } from '../../domain/repository/IUser';
 import { IHttp } from '../infra/IHttp';
@@ -7,9 +7,18 @@ export class UserRepository implements IUserRepository {
   constructor(private http: IHttp) {}
 
   async getUser(): Promise<IUserEntity | null> {
-    const response = await this.http.request('http://localhost:3030/users/1', {
-      method: 'GET',
-    });
+    // const response = await this.http.request('http://localhost:3030/users/1', {
+    //   method: 'GET',
+    // });
+    const response = {
+      content: {
+        id: 'test-id',
+        email: 'test@email.com',
+        name: 'test-name',
+        role: 'user' as Role,
+        createdAt: new Date(),
+      },
+    };
 
     if(response.content) {
       return new UserEntity({
@@ -25,13 +34,16 @@ export class UserRepository implements IUserRepository {
   }
 
   async setName(name: IUserEntity['name']): Promise<boolean> {
-    const response = await this.http.request('http://localhost:3030/users/1/name', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: { name },
-    });
+    // const response = await this.http.request('http://localhost:3030/users/1/name', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: { name },
+    // });
+    const response = {
+      content: {},
+    };
 
     if(response.content) {
       return true;
