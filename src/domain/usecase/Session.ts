@@ -2,7 +2,7 @@ import { ISessionUsecase } from './interface/ISession';
 import { ILoginDto } from '../dto/Login';
 import { ISessionRepository } from '../repository/interface/ISession';
 
-export class Session implements ISessionUsecase {
+export class SessionUsecase implements ISessionUsecase {
   constructor(private sessionRepository: ISessionRepository) {}
 
   async login(dto: ILoginDto): Promise<string | null> {
