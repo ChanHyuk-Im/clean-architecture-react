@@ -11,16 +11,19 @@ export class SessionRepository implements ISessionRepository {
 
   async login(dto: ILoginDto): Promise<string | null> {
     const { email, password } = dto;
-    const response = await this.http.request('http://localhost:3030/users/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: {
-        email,
-        password,
-      },
-    });
+    // const response = await this.http.request('http://localhost:3030/users/login', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: {
+    //     email,
+    //     password,
+    //   },
+    // });
+    const response = {
+      content: 'test-token',
+    };
 
     if(response.content) {
       return response.content;
