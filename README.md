@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Clean Architecture for React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dependency Flow
+![image](https://user-images.githubusercontent.com/19298765/194491613-03d16104-0f56-4d97-b97f-9ce7c338e794.png)
 
 ## Available Scripts
 
